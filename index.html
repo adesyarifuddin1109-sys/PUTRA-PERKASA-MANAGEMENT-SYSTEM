@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123d2c">
+  <title>KOPERASI PUTRA PERKASA ABADI SEJAHTERA</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://daniswaraberkahperkasa.com/klien/ppa_logo.png">
+  <!-- Contoh jika menggunakan file .ico: <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: #f5f7f5;
+    }
+
+    #app {
+      width: 100%;
+      height: 100dvh;
+      position: relative;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: none;
+      background: white;
+    }
+
+    #loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f5f7f5;
+      color: #123d2c;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .spinner {
+      width: 38px;
+      height: 38px;
+      border: 4px solid #dce7df;
+      border-top-color: #17633f;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 16px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    #loading p {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Memuat PUTRA PERKASA — MANAGEMENT SYSTEM...</p>
+      <small>PUTRA PERKASA — MANAGEMENT SYSTEM</small>
+    </div>
+
+    <iframe
+      id="psbFrame"
+      src="https://script.google.com/macros/s/AKfycbxSzA94BtrST-WSo6LhSpJadx99agZEMWHjSzMLf7GKIlGXHAbzHGgxFCEzFeTJUM5w/exec"
+      allow="clipboard-read; clipboard-write"
+      onload="document.getElementById('loading').style.display='none'">
+    </iframe>
+
+  </div>
+</body>
+</html>
